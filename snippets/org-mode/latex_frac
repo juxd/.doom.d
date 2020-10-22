@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: latex_frac
+# uuid: latex_frac
+# key: frac
+# condition: t
+# --
+\frac{$1}{$2}$0

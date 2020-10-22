@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: latex_headers
+# uuid: latex_headers
+# key: headlat
+# condition: t
+# --
+#+OPTIONS: toc:nil
+#+LaTeX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage{mathpazo}
+#+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \setlength{\parindent}{0cm}
+#+LATEX_HEADER: \setlength{\parskip}{6pt}
