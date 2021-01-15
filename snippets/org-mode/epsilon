@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: epsilon
+# uuid: epsilon
+# key: eps
+# condition: t
+# --
+$\epsilon$

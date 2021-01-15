@@ -61,12 +61,14 @@
   (message buffer-file-name))
 
 ;; jump to headers in c
-(define-key c-mode-map (kbd "C-c C-h") 'ff-find-other-file)
+(add-hook! c-mode
+  (define-key c-mode-map (kbd "C-c C-h") 'ff-find-other-file))
 
 ;; FYP: add toolchain to exec path so we can compile from emacs
-(setenv "PATH" (concat (getenv "PATH") ":~/opt/cross/bin"))
+(setenv "PATH" (concat (getenv "PATH") ":" (getenv "HOME") "/opt/cross/bin"))
+(set-formatter! 'clang-format  "clang-format --style=file" :modes '(cc-mode))
 
 ;; dita
 (after! org
-  (setq org-ditaa-jar-path
-        "~/.emacs.d/.local/straight/repos/org-mode/contrib/scripts/ditaa.jar"))
+  (setq org-ditaa-jar-path "~/.emacs.d/.local/straight/repos/org-mode/contrib/scripts/ditaa.jar"
+        org-latex-pdf-process '("latexmk -pdf -bibtex-cond -outdir=%o %f")))
